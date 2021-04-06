@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  /* perspective: 1000px; */
+}
+
+.field {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.field-settings {
+  display: flex;
+}
+
+.grid-size-label {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.grid-size-input {
+  margin-right: 5px;
+  font-size: 24px;
+  width: 50px;
+}
+
+.timer {
+  font-size: 30px;
+}
+
+.timer-text {
+  font-size: 30px;
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+  margin: 5px 0 5px 0;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 400ms;
+}
+
+.back-face,
+.front-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+.back-face {
+  background: url('../img/card.jpg') no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+.front-face {
+  background: #333;
+  color: white;
+  font-size: 72px;
+  line-height: 150px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+.flip,
+.matched {
+  transform: rotateY(180deg);
+}
+
+.locked {
+  pointer-events: none;
+}
